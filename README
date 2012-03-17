@@ -1,0 +1,30 @@
+Leaflet plugins for producing data URLs of canvas layers.
+
+Build Instructions:
+===================
+
+Copy the three files (and directories if needed) in here:
+
+- build/deps.js;
+- src/layer/tile/dataurl/TileLayer.Canvas.toDataURL.js
+- src/map/compositer/Map.Compositer.js;
+
+to the corresponding places in a Leaflet repository and build.
+
+Usage:
+======
+
+The dataurl extension of TileLayer.Canvas brings two new methods to 
+TileLayer.Canvas:
+
+toViewportCanvas(format) - returns a new canvas covering the visible area
+of a canvas layer.
+
+toDataURL(format) - returns a data URL of an image in the given format
+showing the visible area.
+
+The compositer extension to the Map class combines all canvas layers to
+give one composite image. it provides one new method in Map:
+
+compositeCanvases(format) - returns a data URL containing a composite of
+all canvas layers, covering the currently visible area.`
